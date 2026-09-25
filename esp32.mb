@@ -41,6 +41,14 @@ arduino-cli monitor \
 
 
 
+arduino-cli config set library.enable_unsafe_install true
+
+arduino-cli lib install --zip-path tu_archivo.zip
+
+
+Tu librería de Edge Impulse (ivanFRivas-project-1_inferencing) no está en el Library Manager. Es una librería personalizada que solo existe como .zip en tu computadora. Por eso necesitas --zip-path
+
+
 
 
 
