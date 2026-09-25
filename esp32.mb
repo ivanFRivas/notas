@@ -1,1 +1,46 @@
 arduino-cli core update-index
+
+
+arduino-cli core update-index
+
+arduino-cli version
+arduino-cli board list
+arduino-cli core list
+
+incorrecto; porque esta utilizando arduino:esp32 en lugar de esp32:esp32 
+La razón es que esp32:esp32 es el core mantenido por Espressif, que es el que queremos para esta placa.
+
+ID            Version          Nombre
+arduino:esp32 2.0.18-arduino.5 Arduino ESP32 Boards
+esp32:esp32   3.3.11           esp32
+
+correcto:
+
+arduino-cli core install esp32:esp32
+
+ivan@antix:~
+$ arduino-cli core list
+ID          Instalado Última Nombre
+esp32:esp32 3.3.11    3.3.11 esp32
+
+
+Primero quiero que Arduino CLI nos diga qué placas ESP32 conoce:
+arduino-cli board listall | grep -i "AI Thinker"
+
+ivan@antix:~
+$ arduino-cli board listall | grep -i "AI Thinker"
+AI Thinker ESP32-CAM                        esp32:esp32:esp32cam
+ivan@antix:~
+
+
+arduino-cli monitor \
+  --port /dev/ttyUSB0 \
+  --config baudrate=115200 \
+  --config dtr=off \
+  --config rts=off
+
+
+
+
+
+
