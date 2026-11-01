@@ -3,3 +3,8 @@ https://github.com/MarioMey/yt-dlp4vlc-linux    página para instalar el script 
 #It requires yt-dlp installed. So, install it if you don't have it. And always keep it up to date (yt-dlp -U).
 Copy yt-dlp-linux.lua to ~/.local/share/vlc/lua/playlist. VLC will read this file before the one installed at system-wide.
 Copy yt-dlp-linux-info.lua to ~/.local/share/vlc/lua/extensions to show as Extension and it can show what's inside descriptor(): author, version, description, etc. This step is not necessary.
+
+en mi caso, clone el repo.
+
+mkdir -p ~/.local/share/vlc/lua/playlist
+cp yt-dlp-linux.lua ~/.local/share/vlc/lua/playlist/
