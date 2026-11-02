@@ -1,0 +1,12 @@
+
+
+
+sudo pacman -S python-pip python-pipx
+
+instalar FFmpeg luego
+
+instalar yt-dp:   pipx install yt-dlp otra alternativa -->  sudo pacman -Syu yt-dlp
+
+
+
+mpv "https://www.youtube.com/watch?v=EL_ENLACE_DEL_VIDEO"
